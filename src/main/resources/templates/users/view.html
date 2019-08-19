@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf in action</title>
+</head>
+<body>
+<div>
+    <p><strong>ID:</strong><span id="id" th:text="${userModel.user.id}">123</span></p>
+    <p><strong>Name:</strong><span> <a id="name" th:href="@{'/users/delete/'+${userModel.user.id}}" th:text="${userModel.user.name}">nnn</a></span></p>
+    <p><strong>email:</strong><span id="email" th:text="${userModel.user.email}">30</span></p>
+</div>
+
+</body>
+</html>
